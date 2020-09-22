@@ -56,9 +56,9 @@ MIDDLEWARE = [
 if DEBUG:
      MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
      INSTALLED_APPS += ['debug_toolbar', ]
- 
+
      INTERNAL_IPS = ['127.0.0.1']
- 
+
      DEBUG_TOOLBAR_CONFIG = {
          'DISABLE_PANELS': [
              'debug_toolbar.panels.redirects.RedirectsPanel',
@@ -96,6 +96,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'djmodels.db'),
+#        'NAME': '/Users/jstrick/wombats/tractor/pastafazool/wahoooooo.db',  # NAUGHTY!!!!
     }
 }
 

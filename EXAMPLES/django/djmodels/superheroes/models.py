@@ -21,6 +21,7 @@ class Enemy(models.Model):
         return self.name
 
 class Superhero(models.Model):
+    # id = models.IntegerKey()   # automagically created
     name = models.CharField(max_length=32, unique=True)
     real_name = models.CharField(max_length=32)
     secret_identity = models.CharField(max_length=32)
@@ -29,6 +30,6 @@ class Superhero(models.Model):
     enemies = models.ManyToManyField(Enemy)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.real_name}, {self.secret_identity})"
 
 
