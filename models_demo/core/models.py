@@ -29,3 +29,13 @@ class Author(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
+class EveryModel(models.Model):
+    the_string = models.CharField(max_length=32)
+    the_int = models.IntegerField()
+    the_float = models.FloatField()
+    the_create_date = models.DateField(auto_now_add=True)
+    the_timestamp = models.DateField(auto_now=True)
+    the_boolean = models.BooleanField(default=False)
+    the_decimal = models.DecimalField(decimal_places=2)
+    the_email = models.EmailField(max_length=100)
+

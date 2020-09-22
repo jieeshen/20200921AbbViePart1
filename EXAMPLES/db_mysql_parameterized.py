@@ -21,8 +21,6 @@ with closing(pymysql.connect(
         ''', party_name)
 
         print(mycursor.fetchall())
-        print()
-        print(mycursor.description)
 
         # for row in mycursor.fetchall():
         #     print(row)

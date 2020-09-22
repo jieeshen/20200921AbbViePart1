@@ -14,13 +14,14 @@ with closing(
     mycursor = myconn.cursor()
 
     # select first name, last name from all presidents
-    row_count = mycursor.execute('''
+    # retrieves all data from server
+    row_count = mycursor.execute('''   
         select firstname, lastname
         from presidents
     ''')
 
     print("{} rows in result set\n".format(row_count))
 
-    for firstname, lastname in mycursor.fetchall():
+    for firstname, lastname in mycursor.fetchall():   # .fetchone() .fetchmany(n)
         print(firstname, lastname)
     print()

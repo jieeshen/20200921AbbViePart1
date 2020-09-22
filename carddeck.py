@@ -52,3 +52,22 @@ class CardDeck:
     @classmethod
     def get_suits(cls):
         return cls.SUITS
+
+    def __len__(self):
+        return len(self._cards)
+
+    def __str__(self):
+        my_type = type(self)
+        my_name = my_type.__name__
+        return f"{my_name}({self.dealer}, {len(self)})"
+
+    def __add__(self, other):
+        tmp = type(self)(self.dealer)
+        tmp._cards = self._cards + other._cards
+        return tmp
+
+    def toString(self):
+        return "wombat"
+
+
+

@@ -52,3 +52,19 @@ j1.play()
 print(JokerDeck.mro())
 
 print(d1._cards[0])  # NAUGHTY!!
+
+print(len(d1._cards))  # NAUGHTY!!
+
+print(len(d1.cards))  # semi-Naughty
+
+print(len(d1))  #  len() is builtin function
+print(len(j1))
+print(d1, j1)
+print(str(d1), str(j1))
+
+x = d1 + j1
+print(x)
+print(x.draw())
+print(len(x))
+
+print(d1.toString())

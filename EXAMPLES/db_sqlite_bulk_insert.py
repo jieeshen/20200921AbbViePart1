@@ -67,9 +67,12 @@ def populate_database(conn):
     """
 
     fruit_data = get_fruit_data()  # [('apple', .49), ('kiwi', .38)]
+    print(list(fruit_data))
+    fruit_data = get_fruit_data()  # [('apple', .49), ('kiwi', .38)]
 
     try:
-        conn.executemany(INSERT, fruit_data)  # <7>
+        for data_pair in fruit_data:
+            conn.execute(INSERT, data_pair)  # <7>   # .execute_many() is a shortcut
     except sqlite3.DatabaseError as err:
         print(err)
         conn.rollback()
