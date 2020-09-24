@@ -56,7 +56,7 @@ class CardDeck:
     def __len__(self):
         return len(self._cards)
 
-    def __str__(self):
+    def __str__(self):   # toString()
         my_type = type(self)
         my_name = my_type.__name__
         return f"{my_name}({self.dealer}, {len(self)})"
@@ -69,5 +69,8 @@ class CardDeck:
     def toString(self):
         return "wombat"
 
+if __name__ == '__main__':
+    d = CardDeck("Louise")
+    print(d)
 
 
